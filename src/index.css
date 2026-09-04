@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==============================================================
+   THEME TOKENS
+   Every color utility (bg-ink-950, text-paper-50, text-fog-400,
+   border-ink-800, etc.) reads from these CSS variables via
+   tailwind.config.js, so components never need dark:/light:
+   variants — they just automatically follow whichever theme
+   class (.dark or .light) is on <html>.
+   ============================================================== */
+:root,
+html.dark {
+  color-scheme: dark;
+
+  --ink-950: 10 12 16; /* page background */
+  --ink-900: 18 21 27; /* card / surface background */
+  --ink-850: 22 26 33;
+  --ink-800: 27 31 39; /* hairline borders */
+  --ink-700: 38 43 53;
+
+  --paper-50: 236 238 242; /* primary text */
+  --paper-100: 245 246 248;
+  --paper-400: 183 189 201; /* secondary text */
+
+  --fog-400: 138 147 163; /* muted text */
+  --fog-500: 107 115 131;
+
+  --signal-400: 138 164 255; /* accent */
+  --signal-500: 108 142 255;
+  --signal-600: 79 111 224;
+
+  --ok-500: 69 192 138;
+  --warn-500: 224 167 63;
+  --muted2-500: 141 124 224;
+}
+
+html.light {
+  color-scheme: light;
+
+  --ink-950: 250 250 252; /* page background -> near-white */
+  --ink-900: 255 255 255; /* card background -> white */
+  --ink-850: 252 252 253;
+  --ink-800: 224 226 232; /* hairline borders -> light gray */
+  --ink-700: 206 210 219;
+
+  --paper-50: 17 20 26; /* primary text -> near-black */
+  --paper-100: 30 34 42;
+  --paper-400: 61 68 82; /* secondary text */
+
+  --fog-400: 100 108 123; /* muted text, still readable on white */
+  --fog-500: 82 90 105;
+
+  --signal-400: 91 118 224;
+  --signal-500: 66 94 214;
+  --signal-600: 51 75 189;
+
+  --ok-500: 27 150 100;
+  --warn-500: 176 122 15;
+  --muted2-500: 111 92 204;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ink-950 text-paper-50 font-body antialiased;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+::selection {
+  background: rgb(var(--signal-500));
+  color: rgb(var(--ink-950));
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--ink-700));
+  border-radius: 999px;
+}
+
+/* Visible focus states everywhere, keyboard-first */
+:focus-visible {
+  outline: 2px solid rgb(var(--signal-500));
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.hairline {
+  border: 1px solid rgb(var(--ink-800));
+}
+
+.surface {
+  background-color: rgb(var(--ink-900));
+}
+
+.bg-dot-grid {
+  background-image: radial-gradient(rgba(140, 150, 170, 0.18) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.text-gradient {
+  background: linear-gradient(120deg, #6c8eff, #8d7ce0 60%, #45c08a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Respect reduced motion globally */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
