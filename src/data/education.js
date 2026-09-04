@@ -22,7 +22,7 @@ export const experience = [
   {
     id: "collegedunia-web-dev",
     title: "Web Development Intern",
-    place: "Collegedunia (Live Project)",
+    place: "Collegedunia",
     period: "Oct 2025 — Jan 2026",
     description:
       "Worked on a live web development project, contributing to responsive frontend development using HTML and CSS. Collaborated with the team to improve website layout, usability, and gained practical exposure to real-world development workflows.",
