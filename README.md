@@ -5,7 +5,7 @@ and React Router. Every piece of personal content lives in `src/data/` —
 you should never need to touch a component to update your info, add a
 project, or change a link.
 
-## Quick start
+## Quick start 
 
 ```bash
 npm install
