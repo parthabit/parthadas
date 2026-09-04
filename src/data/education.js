@@ -6,37 +6,42 @@
 // array is empty, so you never see fake/blank entries.
 // ==============================================================
 
+
 export const education = [
-
   {
-
     id: "btech-cse",
-
     title: "B.Tech in Computer Science & Engineering",
-
-    place: "RCC Institute of Information Technology  ",
-
+    place: "RCC Institute of Information Technology",
     period: "2023 — 2027",
-
     description:
-
       "Final-year B.Tech CSE student focused on Full-Stack Development, AI/ML, Data Structures & Algorithms, and Cloud Computing.",
-
   },
-
 ];
 
-// Add real internships/jobs here. Leave the array empty to hide
-// the "Experience" track entirely.
-export const experience = [];
+export const experience = [
+  {
+    id: "collegedunia-web-dev",
+    title: "Web Development Intern",
+    place: "Collegedunia (Live Project)",
+    period: "Oct 2025 — Jan 2026",
+    description:
+      "Worked on a live web development project, contributing to responsive frontend development using HTML and CSS. Collaborated with the team to improve website layout, usability, and gained practical exposure to real-world development workflows.",
+  },
+];
 
-// Add real internships here. Leave empty to hide the track.
+// Leave empty to hide the Internship section
 export const internships = [];
 
-// Add real, verifiable certifications here. Leave empty to hide.
+// Add real certifications here
 export const certifications = [];
 
-// Add real, verifiable achievements here. Leave empty to hide.
+// Add real achievements here
 export const achievements = [];
 
-export default { education, experience, internships, certifications, achievements };
+export default {
+  education,
+  experience,
+  internships,
+  certifications,
+  achievements,
+};
