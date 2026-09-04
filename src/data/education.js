@@ -7,13 +7,23 @@
 // ==============================================================
 
 export const education = [
+
   {
+
     id: "btech-cse",
-    title: "B.Tech in Computer Science",
-    place: "", // TODO: add college/university name
-    period: "", // TODO: e.g. "2023 — 2027"
-    description: "Currently pursuing a B.Tech in Computer Science.",
+
+    title: "B.Tech in Computer Science & Engineering",
+
+    place: "RCC Institute of Information Technology  ",
+
+    period: "2023 — 2027",
+
+    description:
+
+      "Final-year B.Tech CSE student focused on Full-Stack Development, AI/ML, Data Structures & Algorithms, and Cloud Computing.",
+
   },
+
 ];
 
 // Add real internships/jobs here. Leave the array empty to hide
